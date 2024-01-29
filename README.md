@@ -25,4 +25,6 @@ Productos, Clientes, Pedidos, Categorías, Proveedores.
 
 ### Diagrama ER
 
-![Diagramaa-img](drawSQL-mercado-free-export-2024-01-29.png)
+![Diagramaa-img](diagram-er.png)
+
+> Nota: El diagrama fue creado con la herramienta [drawSQL](https://drawsql.app/)
