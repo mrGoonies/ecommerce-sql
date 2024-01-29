@@ -22,3 +22,7 @@ Productos, Clientes, Pedidos, Categorías, Proveedores.
     - [x] Detalles de pedidos.
     - [x] Reseña de productos.
     - [x] Compras del cliente.
+
+### Diagrama ER
+
+![Diagramaa-img](drawSQL-mercado-free-export-2024-01-29.png)
