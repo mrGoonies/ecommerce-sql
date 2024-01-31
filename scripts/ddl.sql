@@ -38,10 +38,11 @@ CREATE TABLE seller (
 );
 
 CREATE TABLE stock_product (
+    id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     id_user SMALLINT UNSIGNED NOT NULL,
     id_product SMALLINT UNSIGNED NOT NULL,
     stock SMALLINT UNSIGNED NOT NULL,
-    CONSTRAINT pk_stock_product PRIMARY KEY (id_user),
+    CONSTRAINT pk_stock_product_id PRIMARY KEY (id),
     CONSTRAINT fk_stock_product_user FOREIGN KEY (id_user) REFERENCES user (id),
     CONSTRAINT fk_stock_product_product FOREIGN KEY (id_product) REFERENCES product (id)
 );
@@ -55,7 +56,7 @@ CREATE TABLE order_product (
     CONSTRAINT pk_order_product PRIMARY KEY (id),
     CONSTRAINT fk_order_product_user FOREIGN KEY (id_user) REFERENCES user (id),
     CONSTRAINT fk_order_product_product FOREIGN KEY (id_product) REFERENCES product (id),
-    CONSTRAINT fk_order_product_seller FOREIGN KEY (id_seller) REFERENCES seller (id)
+    CONSTRAINT fk_order_product_seller FOREIGN KEY (id_seller) REFERENCES seller (id_user)
 );
 
 CREATE TABLE shipping (
