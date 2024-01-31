@@ -25,6 +25,40 @@ Productos, Clientes, Pedidos, Categorías, Proveedores.
 
 ### Diagrama ER
 
-![Diagramaa-img](diagram-er.png)
+![Diagrama-img](diagram-er.png)
 
 > Nota: El diagrama fue creado con la herramienta [drawSQL](https://drawsql.app/)
+
+## Instalación del motor de base de datos (MySQL)
+Para poder instalar el motor de base de datos MySQL en tu computadora, puedes hacer uso de tres formas:
+
+1. **Instalación del servidor *Community* de MySQL de forma local.**
+
+2. **Instalación de la herramienta XAMPP (Windows, Linux, Mac).**
+
+3. **Crear contenedor de Docker con MySQL.**
+
+Para mí es más cómodo instalar Docker y crear un contenedor de MySQL, por lo cual te dejo los pasos para hacerlo:
+
+1. **Instalar Docker.**
+
+2. **Instalar imagen de MySQL.**
+
+```bash
+docker pull mysql:latest
+```
+
+3. **Crear contenedor de MySQL.**
+
+```bash
+docker run -d --name mi_mysql -e MYSQL_ROOT_PASSWORD=my_custom_pwd -p 3306:3306 mysql:latest
+```
+
+4. **Conectarse al contenedor de MySQL.**
+
+```bash
+docker exec -it mi_mysql mysql -uroot -p
+````
+
+Con estos pasos estarás listo o lista para ejecutar el script de la base de datos y poder interactuar con ella.
+
